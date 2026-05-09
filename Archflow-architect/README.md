@@ -9,7 +9,7 @@
 
 **Describe a system → Get production-grade architecture, metrics & an interactive diagram.**
 
-🚀 **[Live Demo →](https://archflow-architect.vercel.app)** &nbsp;|&nbsp; 🔌 **[API Docs →](https://archflow-ai.onrender.com/docs)**
+🚀 **[Live Demo →](https://archflow-ai-xi.vercel.app)** &nbsp;|&nbsp; 🔌 **[API Docs →](https://archflow-ai.onrender.com/docs)**
 
 </div>
 
@@ -19,7 +19,7 @@
 
 | Component | URL |
 |---|---|
-| **Frontend** | [archflow-architect.vercel.app](https://archflow-architect.vercel.app) |
+| **Frontend** | [archflow-ai-xi.vercel.app](https://archflow-ai-xi.vercel.app) |
 | **Backend API** | [archflow-ai.onrender.com](https://archflow-ai.onrender.com) |
 | **API Docs (Swagger)** | [archflow-ai.onrender.com/docs](https://archflow-ai.onrender.com/docs) |
 
