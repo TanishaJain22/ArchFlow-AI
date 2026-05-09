@@ -1,0 +1,7 @@
+SCALING PATTERNS
+
+Vertical Scaling (Scale-Up): Adding more CPU, RAM to an existing machine. Good for relational databases up to a limit.
+Horizontal Scaling (Scale-Out): Adding more machines to a cluster. Ideal for web servers and NoSQL databases.
+Data Partitioning (Sharding): Splitting database tables across multiple machines to distribute read/write load.
+Replication: Master-Slave setups for databases, where Master handles writes, and Slaves handle reads.
+Asynchronous Processing: Using message queues (RabbitMQ, Kafka) to defer heavy processing to background workers.

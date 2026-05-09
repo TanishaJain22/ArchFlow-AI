@@ -1,0 +1,8 @@
+SYSTEM DESIGN BASICS
+
+A production-grade system design focuses on high availability, fault tolerance, and scalability.
+Core components usually include:
+1. API Gateways (like Kong or AWS API Gateway) to route incoming client traffic.
+2. Load Balancers (like Nginx or HAProxy) to distribute traffic across compute nodes.
+3. Microservices architectures allowing isolation of responsibilities (User Service, Order Service, etc).
+4. Databases separated into OLTP (like PostgreSQL) for operations, and OLAP (like Redshift) for analytics.

@@ -1,0 +1,124 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-surface: var(--surface);
+  --color-surface-foreground: var(--surface-foreground);
+  --color-glow: var(--glow);
+  --font-mono: "JetBrains Mono", "SF Mono", "Fira Code", ui-monospace, monospace;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+:root {
+  --radius: 0.5rem;
+  /* Dark-first design — these are the dark values */
+  --background: oklch(0.11 0.01 260);
+  --foreground: oklch(0.93 0.005 260);
+  --card: oklch(0.14 0.012 260);
+  --card-foreground: oklch(0.93 0.005 260);
+  --popover: oklch(0.14 0.012 260);
+  --popover-foreground: oklch(0.93 0.005 260);
+  --primary: oklch(0.72 0.19 195);
+  --primary-foreground: oklch(0.11 0.01 260);
+  --secondary: oklch(0.18 0.012 260);
+  --secondary-foreground: oklch(0.8 0.01 260);
+  --muted: oklch(0.18 0.012 260);
+  --muted-foreground: oklch(0.55 0.015 260);
+  --accent: oklch(0.2 0.015 260);
+  --accent-foreground: oklch(0.93 0.005 260);
+  --destructive: oklch(0.6 0.24 25);
+  --destructive-foreground: oklch(0.98 0.003 260);
+  --border: oklch(0.22 0.015 260);
+  --input: oklch(0.18 0.012 260);
+  --ring: oklch(0.72 0.19 195);
+  --chart-1: oklch(0.72 0.19 195);
+  --chart-2: oklch(0.7 0.18 160);
+  --chart-3: oklch(0.65 0.2 280);
+  --chart-4: oklch(0.75 0.15 80);
+  --chart-5: oklch(0.7 0.2 330);
+  --sidebar: oklch(0.09 0.01 260);
+  --sidebar-foreground: oklch(0.93 0.005 260);
+  --sidebar-primary: oklch(0.72 0.19 195);
+  --sidebar-primary-foreground: oklch(0.11 0.01 260);
+  --sidebar-accent: oklch(0.16 0.012 260);
+  --sidebar-accent-foreground: oklch(0.93 0.005 260);
+  --sidebar-border: oklch(0.2 0.012 260);
+  --sidebar-ring: oklch(0.72 0.19 195);
+  --surface: oklch(0.15 0.012 260);
+  --surface-foreground: oklch(0.85 0.01 260);
+  --glow: oklch(0.72 0.19 195 / 15%);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+  }
+
+  ::selection {
+    background-color: oklch(0.72 0.19 195 / 30%);
+  }
+}
+
+@layer utilities {
+  .glow-border {
+    box-shadow: 0 0 0 1px var(--color-border), 0 0 20px -5px var(--glow);
+  }
+  .text-gradient {
+    background: linear-gradient(135deg, oklch(0.72 0.19 195), oklch(0.8 0.14 220));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .surface-glass {
+    background: oklch(0.14 0.012 260 / 80%);
+    backdrop-filter: blur(12px);
+  }
+}

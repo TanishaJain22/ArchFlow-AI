@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    import main
+  File "C:\Users\shubh\Desktop\ARCHFLOW\archflow-architect\backend\main.py", line 5, in <module>
+    from routes import system
+  File "C:\Users\shubh\Desktop\ARCHFLOW\archflow-architect\backend\routes\system.py", line 4, in <module>
+    from services.orchestrator import orchestrator
+  File "C:\Users\shubh\Desktop\ARCHFLOW\archflow-architect\backend\services\orchestrator.py", line 5, in <module>
+    from services.llm_service import llm_service
+  File "C:\Users\shubh\Desktop\ARCHFLOW\archflow-architect\backend\services\llm_service.py", line 1, in <module>
+    from langchain_groq import ChatGroq
+  File "C:\Users\shubh\AppData\Local\Programs\Python\Python313\Lib\site-packages\langchain_groq\__init__.py", line 1, in <module>
+    from langchain_groq.chat_models import ChatGroq
+  File "C:\Users\shubh\AppData\Local\Programs\Python\Python313\Lib\site-packages\langchain_groq\chat_models.py", line 25, in <module>
+    from langchain_core.language_models.chat_models import (
+    ...<4 lines>...
+    )
+ImportError: cannot import name 'LangSmithParams' from 'langchain_core.language_models.chat_models' (C:\Users\shubh\AppData\Local\Programs\Python\Python313\Lib\site-packages\langchain_core\language_models\chat_models.py)

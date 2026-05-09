@@ -1,0 +1,9 @@
+CACHING STRATEGIES
+
+Caching aims to minimize latency by storing frequently accessed data in memory.
+1. Client-side Caching: Browser HTTP cache for static assets.
+2. CDN Caching: Cloudflare or CloudFront to cache assets closer to user geographical locations.
+3. Application Caching: Redis or Memcached integrated into the backend application flow.
+- Cache-Aside: Application checks cache first, if miss, fetches from DB and updates cache.
+- Write-Through: Data is written to cache and DB simultaneously.
+- Write-Behind: Data is written to cache, and asynchronously synced to DB.
